@@ -9,6 +9,5 @@ import java.util.List;
 /**
  * Created by thiba on 17/01/2017.
  */
-public interface CommandeDAO  extends JpaRepository<Client,Long> {
-    List<Commande> findByNom(String nom);
+public interface CommandeDAO  extends JpaRepository<Commande,Long> {
 }

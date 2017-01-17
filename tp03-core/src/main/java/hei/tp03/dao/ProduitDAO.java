@@ -10,7 +10,6 @@ import java.util.List;
 /**
  * Created by thiba on 17/01/2017.
  */
-public interface ProduitDAO extends JpaRepository<Client,Long> {
+public interface ProduitDAO extends JpaRepository<Produit,Long> {
 
-    List<Produit> findByNom(String nom);
 }
