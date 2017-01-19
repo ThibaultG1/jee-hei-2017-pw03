@@ -22,16 +22,16 @@ public class ClientServiceImpl implements ClientService {
 
     @Override
     public List<Client> findByNom(String nom) {
-        return null;
+        return clientDAO.findByNom(nom);
     }
 
     @Override
     public void saveClient(Client client) {
-
+        clientDAO.save(client);
     }
 
     @Override
     public List<Client> findAll() {
-        return null;
+        return clientDAO.findAll();
     }
 }
