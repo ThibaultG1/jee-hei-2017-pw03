@@ -15,7 +15,7 @@ import java.util.List;
 /**
  * Created by thiba on 22/01/2017.
  */
-@WebServlet(name = "ClientServlet")
+@WebServlet(name = "ClientServlet", urlPatterns = "/*")
 public class ClientServlet extends javax.servlet.http.HttpServlet {
 
     private ClientService clientService;
@@ -26,15 +26,6 @@ public class ClientServlet extends javax.servlet.http.HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        /*List<Client> all = clientService.findAll();
-        for (int i = 0; i < all.size() ; i++) {
-            response.getWriter().println(all.get(i));
-        }*/
-        /*List<Client> listeClients = clientService.findAll();
-        resp.setHeader("Content-Type","application/json");
-        ObjectMapper mapper = new ObjectMapper();
-        String jsonAAfficher = mapper.writeValueAsString(listeClients);
-        resp.getWriter().println(jsonAfficher);*/
         PrintWriter out = response.getWriter();
         List<Client> listeClients = clientService.findAll();
         for (Client c : listeClients)
